@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fun Facts About Trees</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#0f9b0f,#000000);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    text-align:center;
+}
+
+.container{
+    background:rgba(255,255,255,0.1);
+    padding:30px;
+    border-radius:15px;
+    width:350px;
+    backdrop-filter: blur(8px);
+}
+
+button{
+    padding:12px 20px;
+    border:none;
+    border-radius:10px;
+    background:#00ff9d;
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    margin-top:20px;
+}
+
+button:hover{
+    background:#00d884;
+}
+
+#fact{
+    margin-top:20px;
+    font-size:18px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+<h1>🌳 Fun Facts About Trees</h1>
+<p>Click the button to see a random tree fact!</p>
+
+<button onclick="generateFact()">Generate Fact</button>
+
+<p id="fact"></p>
+</div>
+
+<script>
+
+const facts = [
+"Trees can live for thousands of years.",
+"Trees produce oxygen that we breathe.",
+"Bamboo is the fastest growing plant in the world.",
+"Over 60,000 tree species exist on Earth.",
+"The tallest tree ever recorded was over 380 feet tall.",
+"Some trees communicate through underground fungal networks.",
+"Trees help reduce air pollution.",
+"Oak trees can live more than 300 years.",
+"The Amazon rainforest produces about 20% of Earth's oxygen.",
+"Trees provide homes for many animals and birds."
+];
+
+function generateFact(){
+const randomFact = facts[Math.floor(Math.random() * facts.length)];
+document.getElementById("fact").innerText = randomFact;
+}
+
+</script>
+
+</body>
+</html>
